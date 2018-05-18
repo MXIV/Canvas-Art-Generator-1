@@ -68,10 +68,10 @@ function generateLines() {
 }
 
 function generateCircles() {
-  generatePoint(ctx.canvas.width /2 , ctx.canvas.height / 2);
+  generatePoint(ctx.canvas.width , ctx.canvas.height);
   pickHex();
   ctx.beginPath();
-  ctx.arc(a(), b(), a(), 0, 2 * Math.PI);
+  ctx.arc(a(), b(), a() / b(), 0, 2 * Math.PI);
   ctx.stroke();
   ctx.closePath();
 }
@@ -94,15 +94,15 @@ function generatePath() {
 function generate(lines, circles, path) {
   if (lines) {
     clearInterval(animateGen);
-    animateGen = setInterval(generateLines, 2);
+    animateGen = setInterval(generateLines, 250);
   }
   else if (circles) {
     clearInterval(animateGen);
-    animateGen = setInterval(generateCircles, 10);
+    animateGen = setInterval(generateCircles, 100);
   }
   else if (path) {
   	clearInterval(animateGen);
-    animateGen = setInterval(generatePath, 100);
+    animateGen = setInterval(generatePath, 250);
   }
 }
 
