@@ -1,0 +1,27 @@
+<html>
+
+  <head>
+    <link rel="stylesheet" type="text/css" href="CAGv1CSS.css">
+  </head>
+
+  <body>
+    <div id="buttons">
+      <button onclick="generate(true, false)">Generate Lines</button>
+      <button onclick="generate(false, true)">Generate Circles</button>
+      <button onclick="generate(false, false, true)">Generate Path</button>
+      <button onclick="stopIt()">Stop</button>
+      <button onclick="clearCanvas()">Clear</button>
+    </div>
+    <div>
+      <canvas id="canvas">
+      </canvas>
+    </div>
+    
+    <script
+  src="https://code.jquery.com/jquery-3.3.1.js"
+  integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
+  crossorigin="anonymous"></script>
+    <script type="text/javascript" src="CAGv1JS.js"></script>
+  </body>
+
+</html>
